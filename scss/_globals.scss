@@ -1,0 +1,48 @@
+@use "./helpers" as *;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--very-dark-blue);
+}
+
+p {
+  color: var(--grayish-blue);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  @include min_small {
+    padding-left: 170px;
+    padding-right: 170px;
+  }
+}
+
+.hide {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}

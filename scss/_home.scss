@@ -1,0 +1,85 @@
+@use "./helpers" as *;
+
+.home {
+  padding: 1rem 0 3rem;
+  text-align: center;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    position: relative;
+    img {
+      width: 110%;
+      margin-left: -17px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -60px;
+      width: 100%;
+      height: 71%;
+      background-image: url("../dist/images/icon-arrow.svg");
+      background-color: var(--soft-blue);
+
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+      z-index: -1;
+    }
+  }
+  &__info {
+    h1 {
+      font-weight: 500;
+      font-size: 1.9rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  & .btns {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    .btn:last-child {
+      border: none;
+      background-color: white;
+      color: var(--grayish-blue);
+    }
+  }
+}
+
+.home {
+  @include min_small {
+    padding: 4.5rem 0;
+    text-align: left;
+    .container {
+      flex-direction: row-reverse;
+      gap: 3rem;
+    }
+    &__img {
+      flex-basis: 120%;
+      right: -70px;
+      &::before {
+        width: 700px;
+        height: 352px;
+        top: 145px;
+        right: -250px;
+        border-radius: 200px;
+      }
+    }
+    &__info {
+      padding: 2.6rem 0;
+      h1 {
+        font-size: 2.7rem;
+      }
+      .btns {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

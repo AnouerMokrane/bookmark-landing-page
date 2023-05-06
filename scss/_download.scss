@@ -1,0 +1,57 @@
+@use "./helpers/" as *;
+
+.download {
+  padding: 4rem 0;
+  text-align: center;
+  h2 {
+    font-weight: 500;
+  }
+  p {
+    max-width: 500px;
+    margin: auto;
+    @include min_small {
+      margin-bottom: 6rem;
+    }
+  }
+  .boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 4rem 0;
+    .box {
+      background-color: white;
+      padding: 1.4rem 2.5rem;
+      box-shadow: 0px 6px 21px -9px var(--grayish-blue);
+      border-radius: 0.5rem;
+      h4 {
+        margin: 1.8rem 0 0.3rem;
+      }
+      p {
+        margin: 0;
+      }
+      .line {
+        margin: 2rem 0 1rem;
+
+        img {
+          max-width: 100%;
+        }
+      }
+      .btn {
+        display: block;
+        width: 100%;
+      }
+
+      @include min_small {
+        max-width: 280px;
+
+        &:first-child {
+          transform: translateY(-40px);
+        }
+        &:last-child {
+          transform: translateY(40px);
+        }
+      }
+    }
+  }
+}

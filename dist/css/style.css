@@ -695,9 +695,6 @@ header .nav__links {
     max-width: 400px;
     margin: 45px auto;
   }
-  .contact .form .input {
-    max-width: 300px;
-  }
   .contact .form .submit__btn {
     padding: 1rem 1.79rem;
   }
